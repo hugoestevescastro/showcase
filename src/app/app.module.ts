@@ -2,10 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { CentralComponent } from './central/central.component';
+import { OverlayComponent } from './overlay/overlay.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CentralComponent,
+    OverlayComponent
   ],
   imports: [
     BrowserModule

@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'showcase';
+  public numbers: number[];
+  constructor() {
+    this.numbers = Array(149).fill(0);
+  }
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-central',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./central.component.sass']
 })
 export class CentralComponent implements OnInit {
-
-  constructor() { }
+  public isMobile: boolean;
+  constructor(private deviceService: DeviceDetectorService) {
+    this.checkDevice();
+  }
 
   ngOnInit() {
+  }
+
+  checkDevice() {
+    this.isMobile = this.deviceService.isMobile();
   }
 
 }

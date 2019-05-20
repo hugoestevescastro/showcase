@@ -1,0 +1,30 @@
+@import '../../variables.sass'
+.container
+    position: absolute
+    top: 50%
+    left: 50%
+    -webkit-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
+    .row
+        display: flex
+        justify-content: center
+        align-items: center
+    .six.columns, .twelve.columns
+        h1,h2
+            text-align: center
+            font-family: 'Major Mono Display', monospace
+            color: $gray
+        h1
+            font-size: $header
+        h2
+            font-size: $subheader
+    .six.columns
+        img
+            max-width: 60%
+    .twelve.columns
+        img
+            max-width: 80%
+            display: block
+            margin: auto
+    
+    

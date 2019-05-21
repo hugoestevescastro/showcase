@@ -1,6 +1,6 @@
 <div class="container" *ngIf="!this.isMobile">
     <div class="row">
-        <div class="six columns">
+        <div class="six columns" #name (mouseenter)="this.fadeOut()">
             <h1>HUGo</h1>
             <h2>esTeVes</h2>
             <h2>cAsTro</h2>
@@ -11,12 +11,12 @@
     </div>
 </div>
 <div class="container" *ngIf="this.isMobile">
-        <div class="row">
-            <div class="twelve columns">
-                <h1>HUGo</h1>
-                <img src="/assets/svg/icon/eae9e9.svg" />
-                <h2>esTeVes</h2>
-                <h2>cAsTro</h2>
-            </div>
+    <div class="row">
+        <div class="twelve columns">
+            <h1>HUGo</h1>
+            <img src="/assets/svg/icon/eae9e9.svg" />
+            <h2>esTeVes</h2>
+            <h2>cAsTro</h2>
         </div>
     </div>
+</div>

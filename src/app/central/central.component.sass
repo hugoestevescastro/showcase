@@ -26,22 +26,30 @@
             max-width: 60%
     .twelve.columns
         button
-            border: 0px !important
+        border: 0px !important
             color: #fff
         img
             max-width: 50%
             display: block
             margin: auto
-
 .cubic-animation-appear
+    -webkit-animation: rotate-appear 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both
     animation: rotate-appear 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both
     opacity: 1
 .cubic-animation-disappear
+    -webkit-animation: rotate-disappear 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both
     animation: rotate-disappear 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both
     opacity: 0
 .fade-out-animation
+    -webkit-animation: fade-out 1s
     animation: fade-out 1s
     opacity: 0
 .fade-in-animation
+    -webkit-animation: fade-in 1s
     animation: fade-in 1s
     opacity: 1
+.scale-animation
+    -webkit-animation: scale-center 2s cubic-bezier(0.860, 0.000, 0.070, 1.000) both
+    animation: scale-center 2s cubic-bezier(0.860, 0.000, 0.070, 1.000) both
+.container.mobile
+    // styles

@@ -1,5 +1,5 @@
 <div class="container" *ngIf="!this.isMobile">
-    <div class="row" #info (mouseenter)="this.animation_intro_s1()" *ngIf="!this.isAnimated">
+    <div class="row" #info (mouseenter)="this.desktop_animation_intro_s1()" *ngIf="!this.isAnimated">
         <div class="six columns">
             <h1>HUGo</h1>
             <h2>esTeVes</h2>
@@ -11,18 +11,17 @@
     </div>
     <div class="row animated" #svg *ngIf="this.isAnimated">
         <div class="twelve columns">
-            <button (click)="this.animation_end_s1()" *ngIf="this.isAnimated">Return</button>
+            <button (click)="this.desktop_animation_end_s1()" *ngIf="this.isAnimated">Return</button>
             <img src="/assets/svg/icon/eae9e9.svg" />
         </div>
     </div>
 </div>
-<div class="container" *ngIf="this.isMobile">
+<div class="container mobile" *ngIf="this.isMobile">
     <div class="row">
         <div class="twelve columns">
-            <h1>HUGo</h1>
-            <img src="/assets/svg/icon/eae9e9.svg" />
-            <h2>esTeVes</h2>
-            <h2>cAsTro</h2>
+            <h1 #mobileinfo_1 *ngIf="!this.isAnimated">HUGo</h1>
+            <img src="/assets/svg/icon/eae9e9.svg" #svg (click)="this.mobile_animation_intro()"/>
+            <h2 #mobileinfo_2 *ngIf="!this.isAnimated">esTeVes</h2>
         </div>
     </div>
 </div>

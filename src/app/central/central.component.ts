@@ -14,6 +14,7 @@ export class CentralComponent implements OnInit {
   public isMobile: boolean;
   public isAnimated: boolean = false;
   private isAnimationComplete: boolean = false;
+  private isToGoBack: boolean = false;
 
   constructor(private deviceService: DeviceDetectorService, private renderer: Renderer2) {
     this.checkDevice();
@@ -21,28 +22,39 @@ export class CentralComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  async ngAfterViewChecked() {
-    if(this.isAnimated && !this.isAnimationComplete) {
-      await this.fadeIn();
-    }
-  }
-
   checkDevice() {
     this.isMobile = this.deviceService.isMobile();
   }
+  async ngAfterViewChecked() {
+    if(this.isAnimated && !this.isAnimationComplete) {
+      this.animation_intro_s2();
+    }
+    else if (!this.isAnimated && !this.isAnimationComplete && this.isToGoBack) {
+      await this.animation_end_s2();
+    }
+  }
 
-  async fadeOut() {
-    this.renderer.setStyle(this.info.nativeElement, 'animation', 'fade-out 1s');
-    this.renderer.setStyle(this.info.nativeElement, 'opacity', '0');
+  async animation_intro_s1() {
+    this.renderer.addClass(this.info.nativeElement, 'fade-out-animation');
     await sleep(1000);
     this.isAnimated = true;
   }
-  async fadeIn() {
+  async animation_intro_s2() {
     this.isAnimationComplete = true;
-    this.renderer.setStyle(this.svg.nativeElement, 'animation', 'rotate 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both');
-    this.renderer.setStyle(this.svg.nativeElement, 'opacity', '1');
+    this.renderer.addClass(this.svg.nativeElement, 'cubic-animation-appear');
     await sleep(1000);
+  }
+  async animation_end_s1() {
+    this.renderer.addClass(this.svg.nativeElement, 'cubic-animation-disappear');
+    await sleep(1000);
+    this.isAnimationComplete = false;
+    this.isAnimated = false;
+    this.isToGoBack = true;
+  }
+  async animation_end_s2() {
+    this.renderer.addClass(this.info.nativeElement, 'fade-in-animation');
+    await sleep(1000);
+    this.isToGoBack = false;
   }
 
 }

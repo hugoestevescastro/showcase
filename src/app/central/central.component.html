@@ -10,8 +10,8 @@
         </div>
     </div>
     <div class="row animated" #svg *ngIf="this.isAnimated">
-        <button (click)="this.animation_end_s1()">Return</button>
         <div class="twelve columns">
+            <button (click)="this.animation_end_s1()" *ngIf="this.isAnimated">Return</button>
             <img src="/assets/svg/icon/eae9e9.svg" />
         </div>
     </div>

@@ -30,10 +30,9 @@ export class CentralComponent implements OnInit {
     this.isMobile = this.deviceService.isMobile();
   }
   async ngAfterViewChecked() {
-    if(this.isAnimated && !this.isAnimationComplete && !this.isMobile) {
+    if (this.isAnimated && !this.isAnimationComplete && !this.isMobile) {
       this.desktop_animation_intro_s2();
-    }
-    else if (!this.isAnimated && !this.isAnimationComplete && this.isToGoBack && !this.isMobile) {
+    } else if (!this.isAnimated && !this.isAnimationComplete && this.isToGoBack && !this.isMobile) {
       await this.desktop_animation_end_s2();
     }
   }
@@ -59,7 +58,7 @@ export class CentralComponent implements OnInit {
     await sleep(1000);
     this.isToGoBack = false;
   }
-  async mobile_animation_intro() {
+  mobile_animation_intro() {
     this.renderer.addClass(this.mobileinfo1.nativeElement, 'fade-out-animation');
     this.renderer.addClass(this.mobileinfo2.nativeElement, 'fade-out-animation');
     this.mobileComponent.animate();

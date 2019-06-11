@@ -1,0 +1,24 @@
+@import '../../../../variables.sass'
+@import '../../../../animations.sass'
+
+.step1
+    max-width: 100%
+.step2
+    max-width: 100%
+    max-height: 60vh
+    &
+        text
+            cursor: pointer
+            opacity: 0
+            -webkit-animation: fade-out .2s
+            animation: fade-out .2s
+        #main-rect
+            transition: stroke .3s ease-in
+        &:hover
+            text
+                opacity: 1  
+                -webkit-animation: fade-in .2s
+                animation: fade-in .2s
+            #main-rect
+                stroke: rgb(16,16,16)
+                

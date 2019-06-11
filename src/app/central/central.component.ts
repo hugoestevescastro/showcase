@@ -1,5 +1,6 @@
 import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
+import { MobileComponent } from './svg/mobile/mobile.component';
 import { sleep } from '../utilities';
 
 @Component({
@@ -12,6 +13,7 @@ export class CentralComponent implements OnInit {
   @ViewChild('svg') svg: ElementRef;
   @ViewChild('mobileinfo_1') mobileinfo1: ElementRef;
   @ViewChild('mobileinfo_2') mobileinfo2: ElementRef;
+  @ViewChild(MobileComponent) mobileComponent: MobileComponent;
 
   public isMobile: boolean;
   public isAnimated: boolean = false;
@@ -60,7 +62,7 @@ export class CentralComponent implements OnInit {
   async mobile_animation_intro() {
     this.renderer.addClass(this.mobileinfo1.nativeElement, 'fade-out-animation');
     this.renderer.addClass(this.mobileinfo2.nativeElement, 'fade-out-animation');
-    this.renderer.addClass(this.svg.nativeElement, 'scale-animation');
+    this.mobileComponent.animate();
     this.isAnimated = true;
   }
 }

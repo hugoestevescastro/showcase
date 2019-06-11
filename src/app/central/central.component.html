@@ -6,13 +6,13 @@
             <h2>cAsTro</h2>
         </div>
         <div class="six columns">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="640" height="640"><defs><path d="" id="bOVloKFI4"></path><path d="M313.88 27.22L612.78 326.14L326.12 612.78L27.22 313.86L313.88 27.22Z" id="c7T42ekFqf"></path></defs><g><g><g><g><use xlink:href="#bOVloKFI4" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="1"></use></g></g><g><g><use xlink:href="#c7T42ekFqf" opacity="1" fill-opacity="0" stroke="#eae9e9" stroke-width="35" stroke-opacity="1"></use></g></g></g></g></svg>
+            <app-svg-desktop [step]="1"></app-svg-desktop>
         </div>
     </div>
     <div class="row animated" #svg *ngIf="this.isAnimated">
         <div class="twelve columns">
             <button (click)="this.desktop_animation_end_s1()" *ngIf="this.isAnimated">Return</button>
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="640" height="640"><defs><path d="" id="bOVloKFI4"></path><path d="M313.88 27.22L612.78 326.14L326.12 612.78L27.22 313.86L313.88 27.22Z" id="c7T42ekFqf"></path></defs><g><g><g><g><use xlink:href="#bOVloKFI4" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="1"></use></g></g><g><g><use xlink:href="#c7T42ekFqf" opacity="1" fill-opacity="0" stroke="#eae9e9" stroke-width="35" stroke-opacity="1"></use></g></g></g></g></svg>
+            <app-svg-desktop [step]="2"></app-svg-desktop>
         </div>
     </div>
 </div>
@@ -20,7 +20,7 @@
     <div class="row">
         <div class="twelve columns">
             <h1 #mobileinfo_1 *ngIf="!this.isAnimated">HUGo</h1>
-            <svg #svg (click)="this.mobile_animation_intro()" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="640" height="640"><defs><path d="" id="bOVloKFI4"></path><path d="M313.88 27.22L612.78 326.14L326.12 612.78L27.22 313.86L313.88 27.22Z" id="c7T42ekFqf"></path></defs><g><g><g><g><use xlink:href="#bOVloKFI4" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="1"></use></g></g><g><g><use xlink:href="#c7T42ekFqf" opacity="1" fill-opacity="0" stroke="#eae9e9" stroke-width="35" stroke-opacity="1"></use></g></g></g></g></svg>
+            <app-svg-mobile #svg (click)="this.mobile_animation_intro()" ></app-svg-mobile>
             <h2 #mobileinfo_2 *ngIf="!this.isAnimated">esTeVes</h2>
         </div>
     </div>

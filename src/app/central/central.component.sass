@@ -22,22 +22,18 @@
         h2
             font-size: $subheader
     .six.columns
-        svg
+        app-svg-desktop
             max-width: 60%
     .twelve.columns
         button
             border: 0px !important
             color: #fff
-        svg
+        app-svg-desktop
             max-width: 50%
             display: block
-            margin: auto
-            &
-                use
-                    transition: stroke .3s ease-in
-            &:hover
-                use
-                    stroke: rgb(16,16,16)
+            margin: auto 
+        app-svg-mobile
+            max-width: 100%
 .cubic-animation-appear
     -webkit-animation: rotate-appear 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both
     animation: rotate-appear 1s cubic-bezier(0.785, 0.135, 0.150, 0.860) both
@@ -54,10 +50,7 @@
     -webkit-animation: fade-in 1s
     animation: fade-in 1s
     opacity: 1
+    display: block
 .scale-animation
     -webkit-animation: scale-center 2s cubic-bezier(0.860, 0.000, 0.070, 1.000) both
     animation: scale-center 2s cubic-bezier(0.860, 0.000, 0.070, 1.000) both
-.container.mobile
-    .twelve.columns
-        svg
-            height: auto

@@ -16,18 +16,23 @@
   </defs>
   <g clip-path="url(#_clipPath_RCM9bP0lGb5cwfHdUrvZKA5lbKx4HAUA)">
     <rect id="main-rect" x="501.919" y="504.419" width="1996.162" height="1996.162" transform="matrix(0.707,0.707,-0.707,0.707,1501.768,-620.588)" fill="none" vector-effect="non-scaling-stroke" stroke-width="20" stroke="rgb(234,233,233)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="2"/>
-    <a href="https://www.google.com" target="_blank">
-      <text transform="matrix(1,0,0,1,1450,1285.152)" style="font-family:'Raleway';font-weight:400;font-size:72px;font-style:normal;fill:#eae9e9;stroke:none;">
-      CV
+    <a href="/assets/cv.png" target="_blank">
+      <text transform="matrix(1,0,0,1,1280,1285.152)" style="font-family:'Raleway';font-weight:400;font-size:72px;font-style:normal;fill:#eae9e9;stroke:none;">
+      CURRICULUM
       </text>
     </a>
-    <a href="https://www.google.com" target="_blank">
-      <text transform="matrix(1,0,0,1,1299.5,1515.68)" style="font-family:'Raleway';font-weight:400;font-size:72px;font-style:normal;fill:#eae9e9;stroke:none;">
-        PORTFOLIO
+    <a (click)="this.portfolio = !this.portfolio" *ngIf="this.portfolio">
+      <text transform="matrix(1,0,0,1,1320,1515.68)" style="font-family:'Raleway';font-weight:400;font-size:72px;font-style:normal;fill:#eae9e9;stroke:none;">
+          PORTFOLIO
       </text>
     </a>
-    <a href="https://www.google.com" target="_blank">
-      <text transform="matrix(1,0,0,1,1330,1750.152)" style="font-family:'Raleway';font-weight:400;font-size:72px;font-style:normal;fill:#eae9e9;stroke:none;">
+    <a (click)="this.portfolio = !this.portfolio" *ngIf="!this.portfolio">
+      <text transform="matrix(1,0,0,1,1289,1515.68)" style="font-family:'Raleway';font-weight:400;font-size:72px;font-style:normal;fill:#eae9e9;stroke:none;">
+          IN PROGRESS
+      </text>
+    </a>
+    <a href="mailto:hugoestevescastro@gmail.com">
+      <text transform="matrix(1,0,0,1,1345,1750.152)" style="font-family:'Raleway';font-weight:400;font-size:72px;font-style:normal;fill:#eae9e9;stroke:none;">
         CONTACT
       </text>
     </a>

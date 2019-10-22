@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SvgDesktopComponent implements OnInit {
   @Input() step: number;
+  public portfolio: boolean = true;
   constructor() { }
 
   ngOnInit() {

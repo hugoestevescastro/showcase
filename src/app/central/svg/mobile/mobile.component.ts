@@ -8,6 +8,7 @@ import { sleep } from 'src/app/utilities';
 })
 export class MobileComponent implements OnInit {
   @ViewChild('svg') svg: ElementRef;
+  public portfolio: boolean = true;
   constructor(private renderer: Renderer2) { }
 
   ngOnInit() {

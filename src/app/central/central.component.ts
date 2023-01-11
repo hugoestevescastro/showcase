@@ -1,5 +1,4 @@
 import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
-import { DeviceDetectorService } from 'ngx-device-detector';
 import { MobileComponent } from './svg/mobile/mobile.component';
 import { sleep } from '../utilities';
 
@@ -20,14 +19,14 @@ export class CentralComponent implements OnInit {
   private isAnimationComplete: boolean = false;
   private isToGoBack: boolean = false;
 
-  constructor(private deviceService: DeviceDetectorService, private renderer: Renderer2) {
+  constructor(private renderer: Renderer2) {
     this.checkDevice();
   }
 
   ngOnInit() {
   }
   checkDevice() {
-    this.isMobile = this.deviceService.isMobile();
+    this.isMobile = window.innerWidth < 1024;
   }
   async ngAfterViewChecked() {
     if (this.isAnimated && !this.isAnimationComplete && !this.isMobile) {

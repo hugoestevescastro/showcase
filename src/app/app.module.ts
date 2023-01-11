@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { DeviceDetectorModule } from 'ngx-device-detector';
 
 import { AppComponent } from './app.component';
 import { CentralComponent } from './central/central.component';
@@ -17,8 +16,7 @@ import { MobileComponent } from './central/svg/mobile/mobile.component';
     MobileComponent
   ],
   imports: [
-    BrowserModule,
-    DeviceDetectorModule.forRoot()
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
